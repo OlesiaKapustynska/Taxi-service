@@ -19,8 +19,8 @@ public class ManufacturerDaoImpl implements ManufacturerDao {
     public Manufacturer create(Manufacturer manufacturer) {
         String query = "INSERT INTO manufacturers (name, country) VALUES (?,?)";
         try (Connection connection = ConnectionUtil.getConnection();
-                PreparedStatement preparedStatement
-                     = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+                PreparedStatement preparedStatement = connection
+                        .prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             setUpdate(preparedStatement, manufacturer).executeUpdate();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
             if (resultSet.next()) {
@@ -53,7 +53,7 @@ public class ManufacturerDaoImpl implements ManufacturerDao {
     public List<Manufacturer> getAll() {
         String query = "SELECT * FROM manufacturers WHERE deleted = FALSE";
         try (Connection connection = ConnectionUtil.getConnection();
-             Statement statement = connection.createStatement()) {
+                 Statement statement = connection.createStatement()) {
             List<Manufacturer> manufacturers = new ArrayList<>();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
@@ -71,8 +71,8 @@ public class ManufacturerDaoImpl implements ManufacturerDao {
         String query = "UPDATE manufacturers SET name = ?, country = ?"
                 + " WHERE id = ? AND deleted = FALSE";
         try (Connection connection = ConnectionUtil.getConnection();
-                PreparedStatement preparedStatement
-                     = setUpdate(connection.prepareStatement(query), manufacturer)) {
+                PreparedStatement preparedStatement = setUpdate(connection
+                        .prepareStatement(query), manufacturer)) {
             preparedStatement.setLong(3, manufacturer.getId());
             preparedStatement.executeUpdate();
             return manufacturer;

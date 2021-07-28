@@ -6,11 +6,11 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConnectionUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306"
-            + "/manufacturers_db?serverTimezone=UTC";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "99887766";
+    private static final String URL = "YOUR DATABASE URL";
+    private static final String USERNAME = "YOUR USERNAME";
+    private static final String PASSWORD = "YOUR PASSWORD";
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    // If you use another database you need to change field "JDBC_DRIVER" and dependencies in web.xml.
 
     static {
         try {
@@ -31,4 +31,3 @@ public class ConnectionUtil {
         }
     }
 }
-

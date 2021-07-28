@@ -21,7 +21,7 @@ public class DriverDaoImpl implements DriverDao {
                 + "VALUES (?, ?, ?, ?)";
         try (Connection connection = ConnectionUtil.getConnection();
                  PreparedStatement statement = connection.prepareStatement(query,
-                     Statement.RETURN_GENERATED_KEYS)) {
+                         Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, driver.getName());
             statement.setString(2, driver.getLicenseNumber());
             statement.setString(3, driver.getLogin());
@@ -95,8 +95,7 @@ public class DriverDaoImpl implements DriverDao {
                 + "SET name = ?, license_number = ?, login = ?, password = ? "
                 + "WHERE id = ? AND deleted = FALSE";
         try (Connection connection = ConnectionUtil.getConnection();
-                PreparedStatement statement
-                     = connection.prepareStatement(query)) {
+                PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, driver.getName());
             statement.setString(2, driver.getLicenseNumber());
             statement.setString(3, driver.getLogin());
