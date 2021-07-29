@@ -1,5 +1,5 @@
 ## Taxi-service app
-![](https://prnt.sc/1haow7n)
+<img src="https://prnt.sc/1haow7n" >
 This is a simple web application for registration drivers in taxi service and managements cars, manufacturers, drivers.
 The project is according to the requirements of SOLID principles for easy reading, testing, and extension. This project used N-tier architecture and users authentication.
 ***
