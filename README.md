@@ -1,5 +1,5 @@
 ## Taxi-service app
-<img src="https://prnt.sc/1haow7n" >
+<img src="https://www.freepik.com/free-vector/taxi-app-interface-concept_7546959.htm#page=1&query=taxi&position=0">
 This is a simple web application for registration drivers in taxi service and managements cars, manufacturers, drivers.
 The project is according to the requirements of SOLID principles for easy reading, testing, and extension. This project used N-tier architecture and users authentication.
 ***
