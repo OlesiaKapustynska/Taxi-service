@@ -10,7 +10,6 @@ public class ConnectionUtil {
     private static final String USERNAME = "YOUR USERNAME";
     private static final String PASSWORD = "YOUR PASSWORD";
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    // If you use another database you need to change field "JDBC_DRIVER" and dependencies in web.xml.
 
     static {
         try {
