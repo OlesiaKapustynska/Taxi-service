@@ -1,3 +1,4 @@
+![t](https://www.taxinainital.com/wp-content/uploads/2019/03/taxi-cab-service.png)
 ## Taxi-service app
 This is a simple web application for registration drivers in taxi service and managements cars, manufacturers, drivers.
 The project is according to the requirements of SOLID principles for easy reading, testing, and extension.
